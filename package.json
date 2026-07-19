@@ -1,0 +1,28 @@
+{
+  "name": "inventory-tracker",
+  "version": "1.0.0",
+  "description": "Household and pantry inventory tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"npm start\" \"npm --prefix client start\"",
+    "test": "jest --testMatch='**/*.test.js' --forceExit --detectOpenHandles --maxWorkers=1",
+    "test:watch": "jest --testMatch='**/*.test.js' --watch",
+    "test:coverage": "jest --testMatch='**/*.test.js' --coverage --forceExit --detectOpenHandles --maxWorkers=1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2"
+  }
+}
