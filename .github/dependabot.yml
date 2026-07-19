@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "automated"
+  - package-ecosystem: "npm"
+    directory: "/client"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "client"
+      - "automated"
+
+# Notes:
+# - No automerge configuration is enabled here. Major/breaking updates will open PRs and must be reviewed/merged manually.
+# - Change schedule to "daily" for faster updates, or add reviewers/assignees if desired.
